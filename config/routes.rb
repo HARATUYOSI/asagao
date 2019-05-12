@@ -5,4 +5,7 @@ Rails.application.routes.draw do
     get "lesson/step#{n}(/:name)" => "lesson#step#{n}"
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :members do
+    get "search", on: :collection
+  end
 end
